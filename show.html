@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🤫 Surprise 🤫</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Courgette&family=Noto+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="wrap-container">      
+        <div class="banner">
+            <div class="wish">
+                <script>
+                    const params = new URLSearchParams(window.location.search);
+                    const username = params.get('username');
+
+                    if (username) {
+                        document.write(
+                            '<p>Dear, <span id=nameclr>' + username + '</span>😍<br> Wishing you and your family a New Year filled with <span id=nameclr> joy </span>😊, <span id=nameclr>laughter 😁</span>, and <span id=nameclr>unforgettable</span> moments 🤩. May the coming year bring you closer to your <span id=nameclr>dreams</span> and shower you with <span id=nameclr>love</span> and <span id=nameclr>prosperity</span> 💖. 🌟 May each day be a new opportunity to create <span id=nameclr>beautiful</span> memories and cherish the moments with your loved ones 🥰. 🥂 <span id=nameclr>Happy New Year!</span> 🎉✨ <br>Warmest wishes, <br><span id=nameclr>Abel C Varghese</span> 😎</p > '
+                        );
+                    }
+                </script>
+            </div>
+            <div class="bubble">
+                <h1>
+                    <pre>
+                    Happy 
+                          New Year
+                </pre>
+                </h1>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="./js/snowfall.min.js"></script>
+<script>
+    snowFall.snow(document.querySelector(".banner"), {
+        round: true,
+        minSize: 1,
+        maxSize: 10,
+        shadow: true,
+        flakeCount: 600,
+        flakeColor: "#c7dfea"
+    });
+</script>
+<script src="./js/app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+</html>

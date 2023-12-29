@@ -1,0 +1,282 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Abril Fatface';
+    font-family: 'Rubik Doodle Shadow';
+    font-family: 'Courgette';
+    font-family: 'Noto Serif';
+    margin: 0;
+    padding: 0;
+}
+
+.loader {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(./img/santa.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.toast-msg{
+    position: absolute;
+    background-color: transparent;
+    top: -40px;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    animation: colorchange 3s linear 0s infinite;
+}
+@keyframes colorchange {
+    0%,100%{
+        color: white;
+    }
+    10%,90%{
+        color: green;
+    }
+    20%,80%{
+        color: yellow;
+    }
+    30%,70%{
+        color: blue;
+    }
+    40%,60%{
+        color: red;
+    }
+    50%{
+        color: orange;
+    }
+}
+.loader .form {
+    width: 50%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #0c1842ad;
+    color: white;
+    position: relative;
+    border-radius: 10px;
+}
+
+.loader .form #santa {
+    position: absolute;
+    width: 18%;
+    right: 0;
+    bottom: 0;
+}
+.loader .form .info{
+    text-align: center;
+    margin-bottom: 35px;
+}
+.loader .form .info .typing-text {
+    overflow: hidden;
+    color: #ffffff;
+    font-size: 24px;
+    animation: typing 4s steps(40) ;
+    text-shadow: 3px -1px 2px #d90100;
+}
+
+@keyframes typing {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+.sub-btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+#uinput{
+    text-shadow: 3px -1px 2px #d90100;
+}
+#uname{
+    border: 1px solid white;
+    outline: none;
+    background: transparent;
+    border-radius: 6px;
+    padding: 0px 10px;
+    color: white;
+}
+#uname:focus{
+    color: white;
+    box-shadow: 0px 0px 12px 0px #d90100;
+}
+.noshadow{
+    text-shadow: none;
+}
+.sub-btn #submit{
+    border: 1px solid white;
+    outline: none;
+    background: transparent;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 9px;
+    box-shadow: 1px 1px 4px 0px white;
+    text-shadow: 3px -1px 2px #d90100;
+}
+.sub-btn #submit:hover{
+    box-shadow: 0px 0px 12px 0px #d90100;
+}
+.wrap-container {
+    background: url(./img/img.jpg);
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    animation: animColor 1s linear infinite;
+    
+}
+#nameclr{
+    color: blue;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+.banner {
+    height: 100%;
+    position: relative;
+}
+.banner .wish{
+    position: absolute;
+    background-color: #a3734987;
+    width: 50%;
+    bottom: 120px;
+    margin-left: 100px;
+    padding: 15px 15px;
+    color: #fef8d2;
+    border-radius: 8px;
+    border: 1px solid #ffffff94;
+    font-size: 20px;
+}
+.banner .wish p{
+    font-family: 'Noto Serif';
+    animation: typing 8s steps(40) ;
+}
+
+@keyframes animColor {
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+@keyframes animate {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 0 550px;
+    }
+}
+
+.bubble pre {
+    font-size: 82px;
+    color: #be373e;
+    animation: bubble 7s linear infinite;
+    font-family: 'Rubik Doodle Shadow'
+}
+
+.bubble {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: -100px;
+   
+}
+
+@keyframes bubble {
+    0% {
+        transform: translatex(40vh);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-70vh);
+        opacity: 0;
+    }
+}
+
+/* Responsive */
+@media only screen and (max-width: 768px) {
+    .loader .form {
+        width: 90%;
+    }
+
+    .loader .form #santa {
+        width: 25%;
+    }
+
+    #uname {
+        width: 90%;
+    }
+
+    .banner .wish {
+        width: 90%;
+        left: -80px;
+    }
+    .loader .form .info .typing-text{
+        font-size: 16px;
+    }
+    #uinput{
+        font-size: 16px;
+    }
+    #uname{
+        width: 80%;
+    }
+    .sub-btn #submit{
+        font-size: 16px;
+        padding: 2px 15px;
+    }
+    .banner .wish p{
+        font-size: 16px
+    }
+    .bubble pre{
+        font-size: 35px;
+        animation: bubblenew 7s linear infinite;
+    }
+    @keyframes bubblenew {
+        0% {
+            transform: translatex(40vh);
+            opacity: 0;
+        }
+    
+        50% {
+            opacity: 1;
+        }
+    
+        70% {
+            opacity: 1;
+        }
+    
+        100% {
+            transform: translateY(-90vh);
+            opacity: 0;
+        }
+    }
+}
+@media only screen and (max-width: 480px) {
+    .toast{
+        opacity: 1 !important;
+        background-color: transparent;
+    }
+}
