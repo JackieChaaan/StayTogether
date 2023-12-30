@@ -30,6 +30,7 @@
     transform: translateX(-50%);
     width: 100%;
     animation: colorchange 3s linear 0s infinite;
+    display: none;
 }
 @keyframes colorchange {
     0%,100%{
@@ -218,6 +219,9 @@
 
 /* Responsive */
 @media only screen and (max-width: 768px) {
+    .toast-msg{
+        display: block;
+    }
     .loader .form {
         width: 90%;
     }
